@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TemplateTest</title>
+    <%= csrf_meta_tags %>
+    <!--이부분 수정 아래 4줄 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body id="top" class="has-header-search">
+    <%= render 'shared/nav' %>
+    
+    <%= yield %>
+    <%= render 'shared/footer' %>
+    <%= yield 'javascript_content' %>
+  </body>
+</html>
