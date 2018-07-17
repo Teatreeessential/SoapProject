@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>TemplateTest</title>
@@ -13,8 +13,10 @@
   <body id="top" class="has-header-search">
     <%= render 'shared/nav' %>
     
+    <div class="container">
     <%= yield %>
     <%= render 'shared/footer' %>
     <%= yield 'javascript_content' %>
+    </div>
   </body>
 </html>
